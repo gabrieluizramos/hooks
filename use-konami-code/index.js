@@ -16,7 +16,10 @@ const useKonamiCode = callback => {
     };
 
     useEffect(() => {
-        if(active) callback(active);
+        if(active) {
+            callback();
+            setActive(false);
+        }
     }, [active]);
 
     useEffect(() => {
@@ -25,7 +28,7 @@ const useKonamiCode = callback => {
         return () => window.addEventListener('keydown', calculateKonami);
     }, []);
 
-    return { active, progress };
+    return { active };
 };
 
 export default useKonamiCode;

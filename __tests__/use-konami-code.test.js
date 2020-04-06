@@ -14,6 +14,5 @@ describe('useKonamiCode', () => {
         }));
 
         expect(callback).toHaveBeenCalledTimes(1);
-        expect(result.current.active).toEqual(true);
     });
 });
