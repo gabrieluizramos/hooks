@@ -4,7 +4,7 @@ import { keys, code } from '../use-konami-code/config';
 import useKonamiCode from '../use-konami-code';
 
 describe('useKonamiCode', () => {
-    it('Should dispatch callback fn after typing correctly sequence of konami', async () => {
+    it('Should dispatch callback fn after typing correctly sequence of konami', () => {
         const callback = jest.fn();
         const { result } = renderHook(() => useKonamiCode(callback));
         expect(callback).toHaveBeenCalledTimes(0);
